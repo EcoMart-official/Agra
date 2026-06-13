@@ -54,14 +54,14 @@ export default function Navbar() {
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-2" : "bg-white/90 backdrop-blur-md py-4"
+        scrolled ? "bg-white shadow-md py-1.5" : "bg-white/95 backdrop-blur-md py-2.5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 z-50">
-            <img src="https://i.ibb.co/35pG18YG/Screenshot-20260613-193516.png" alt="Kidzee Logo" className="h-12 w-12 rounded-full object-cover shadow-sm bg-white" />
-            <span className="text-xl font-bold text-gray-900" style={{ fontFamily: 'Poppins' }}>Kidzi Egra</span>
+            <img src="https://i.ibb.co/35pG18YG/Screenshot-20260613-193516.png" alt="Kidzee Logo" className="h-10 w-10 rounded-full object-cover shadow-sm border border-gray-100 bg-white" />
+            <span className="text-xl font-bold text-gray-900" style={{ fontFamily: 'Poppins' }}>Kidzee Egra</span>
           </Link>
 
           {/* Desktop Nav */}

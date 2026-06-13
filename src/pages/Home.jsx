@@ -1,96 +1,108 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Heart, Shield, Music, BookOpen, Users, PlayCircle, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 import WhyChooseKidzee from "../components/home/WhyChooseKidzee";
 import PentemindPedagogy from "../components/home/PentemindPedagogy";
 import ProgramPreview from "../components/home/ProgramPreview";
 import GalleryPreview from "../components/home/GalleryPreview";
 
-const bgImages = [
-  "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1606092195728-328dff12a27e?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=2000&auto=format&fit=crop"
-];
-
 export default function Home() {
-  const [bgIndex, setBgIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setBgIndex((prev) => (prev + 1) % bgImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-[#1E1E1E]">
-        {bgImages.map((img, idx) => (
-           <div
-             key={idx}
-             className={`absolute inset-0 z-0 transition-opacity duration-1000 ${bgIndex === idx ? 'opacity-100' : 'opacity-0'}`}
-             style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-           >
-             <div className="absolute inset-0 bg-[#1E1E1E]/60"></div>
-           </div>
-        ))}
+      <section className="relative min-h-[90vh] flex items-center bg-[#F8F9FC] pt-20 lg:pt-0">
+        <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23FDB813\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
         
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32 text-center w-full mt-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-center"
-          >
-            <div className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-[#FDB813] font-semibold text-sm mb-6 shadow-sm border border-white/20">
-              <Sparkles className="w-4 h-4 inline-block mr-2" />
-              Admission Open 2024-25
-            </div>
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white" style={{ fontFamily: 'Poppins' }}>
-              Where Kids <span className="text-[#FDB813]">Love to Learn</span> & Grow.
-            </h1>
-            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed font-sans">
-              Every child is unique, every child matters. Provide your child with a strong foundation today for a successful tomorrow at Kidzee Egra.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
-              <Link to="/admissions" className="bg-[#FDB813] text-[#1E1E1E] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e6a611] transition-all transform hover:scale-105 shadow-xl shadow-[#FDB813]/30 flex items-center justify-center">
-                Enroll Your Child <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <a href="tel:+919091908900" className="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#1E1E1E] transition-all flex items-center justify-center">
-                <PlayCircle className="mr-2 w-5 h-5" /> Book a Tour
-              </a>
-            </div>
-          </motion.div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex flex-col items-start pt-10 lg:pt-0"
+            >
+              <div className="inline-block px-4 py-2 rounded-full bg-white text-[#FDB813] font-semibold text-sm mb-6 shadow-sm border border-[#FDB813]/20">
+                <Sparkles className="w-4 h-4 inline-block mr-2" />
+                Admission Open 2024-25
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-gray-900" style={{ fontFamily: 'Poppins' }}>
+                Where Kids <span className="text-[#FDB813]">Love to Learn</span> & Grow.
+              </h1>
+              <p className="text-xl text-gray-600 mb-10 max-w-lg leading-relaxed font-sans">
+                Every child is unique, every child matters. Provide your child with a strong foundation today for a successful tomorrow at Kidzee Egra.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link to="/admissions" className="bg-[#FDB813] text-[#1E1E1E] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e6a611] transition-all transform hover:scale-105 shadow-xl shadow-[#FDB813]/30 flex items-center justify-center">
+                  Enroll Your Child <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <a href="tel:+919091908900" className="bg-white text-[#1E1E1E] border border-gray-200 px-8 py-4 rounded-full font-bold text-lg hover:border-[#FDB813] hover:text-[#FDB813] transition-all flex items-center justify-center shadow-sm">
+                  <PlayCircle className="mr-2 w-5 h-5" /> Book a Tour
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="relative mt-12 lg:mt-0 pb-12 lg:pb-0"
+            >
+              <div className="relative w-full aspect-square max-w-lg mx-auto">
+                <div className="absolute inset-0 bg-[#FDB813] rounded-[3rem] rotate-6 opacity-20 blur-2xl"></div>
+                
+                <div className="relative rounded-[3rem] w-full h-full z-10 shadow-2xl border-8 border-white overflow-hidden bg-gray-100">
+                  <img 
+                    src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1000&auto=format&fit=crop" 
+                    alt="Happy preschool children learning" 
+                    className="absolute inset-0 object-cover w-full h-full"
+                  />
+                </div>
+                
+                {/* Floating Elements */}
+                <motion.div animate={{ y: [-10, 10, -10] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute -top-6 -left-6 lg:-top-10 lg:-left-10 bg-white p-4 rounded-2xl shadow-xl z-20 hidden md:block">
+                  <Star className="w-10 h-10 text-[#FDB813] fill-[#FDB813]" />
+                </motion.div>
+
+                <motion.div animate={{ y: [10, -10, 10] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }} className="absolute -bottom-6 -right-2 sm:-right-6 lg:-bottom-8 lg:-right-8 bg-white px-4 sm:px-6 py-3 sm:py-4 rounded-2xl shadow-xl z-20 flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#1E1E1E]/5 flex items-center justify-center shrink-0">
+                    <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-[#1E1E1E] fill-[#1E1E1E]" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-lg sm:text-xl text-gray-900 leading-tight">100%</div>
+                    <div className="text-xs sm:text-sm text-gray-500">Child Safety</div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* 2. Floating Statistics */}
-      <section className="py-12 bg-white relative z-20 -mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-t-[3rem] shadow-sm">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-100">
-          {[
-            { value: "500+", label: "Happy Kids" },
-            { value: "15+", label: "Expert Teachers" },
-            { value: "10+", label: "Learning Zones" },
-            { value: "4.9", label: "Parent Rating", icon: <Star className="inline w-4 h-4 mb-1 text-[#FDB813] fill-[#FDB813]" /> }
-          ].map((stat, idx) => (
-             <motion.div 
-               key={idx}
-               initial={{ opacity: 0, y: 20 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               transition={{ delay: idx * 0.1 }}
-               className="text-center"
-             >
-                <div className="text-3xl md:text-4xl font-bold text-[#FDB813] mb-2 flex items-center justify-center gap-1">{stat.value} {stat.icon && stat.icon}</div>
-                <div className="text-gray-500 font-medium text-sm md:text-base">{stat.label}</div>
-             </motion.div>
-          ))}
+      <section className="py-12 bg-white border-b border-gray-100 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-100">
+            {[
+              { value: "500+", label: "Happy Kids" },
+              { value: "15+", label: "Expert Teachers" },
+              { value: "10+", label: "Learning Zones" },
+              { value: "4.9", label: "Parent Rating", icon: <Star className="inline w-4 h-4 mb-1 text-[#FDB813] fill-[#FDB813]" /> }
+            ].map((stat, idx) => (
+               <motion.div 
+                 key={idx}
+                 initial={{ opacity: 0, y: 20 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: idx * 0.1 }}
+                 className="text-center"
+               >
+                  <div className="text-3xl md:text-4xl font-bold text-[#FDB813] mb-2 flex items-center justify-center gap-1">{stat.value} {stat.icon && stat.icon}</div>
+                  <div className="text-gray-500 font-medium text-sm md:text-base">{stat.label}</div>
+               </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
