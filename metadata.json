@@ -1,0 +1,6 @@
+{
+  "name": "Kidzee Egra",
+  "description": "Premium modern preschool website for Kidzee Egra.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
