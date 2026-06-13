@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useState } from 'react';
 import PageHero from '../components/PageHero';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -16,6 +17,7 @@ export default function FAQ() {
 
   return (
     <div>
+      <SEO title="FAQ" url="/faq" />
       <PageHero title="Frequently Asked Questions" subtitle="Find answers to common inquiries below." />
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4">

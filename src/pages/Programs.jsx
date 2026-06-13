@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import ProgramPreview from '../components/home/ProgramPreview';
@@ -5,6 +6,7 @@ import ProgramPreview from '../components/home/ProgramPreview';
 export default function Programs() {
   return (
     <div>
+      <SEO title="rograms" url="/programs" />
       <PageHero 
         title="Our Programs" 
         subtitle="Explore our age-appropriate learning journeys from Playgroup to Senior KG."

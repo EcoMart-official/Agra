@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { MapPin, Phone, Mail, Instagram, MessageCircle } from 'lucide-react';
@@ -5,6 +6,7 @@ import { MapPin, Phone, Mail, Instagram, MessageCircle } from 'lucide-react';
 export default function Contact() {
   return (
     <div>
+      <SEO title="ontact" url="/contact" />
       <PageHero 
         title="Contact Us" 
         subtitle="We would love to hear from you."

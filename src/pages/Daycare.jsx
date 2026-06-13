@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { Check } from 'lucide-react';
@@ -5,6 +6,7 @@ import { Check } from 'lucide-react';
 export default function Daycare() {
   return (
     <div>
+      <SEO title="aycare" url="/programs/daycare" />
       <PageHero 
         title="Daycare" 
         subtitle="A safe, nurturing home away from home."

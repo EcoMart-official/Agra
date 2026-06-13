@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useState } from 'react';
 import PageHero from '../components/PageHero';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -22,6 +23,7 @@ export default function Gallery() {
 
   return (
     <div>
+      <SEO title="allery" url="/gallery" />
       <PageHero 
         title="Our Gallery" 
         subtitle="Moments of joy, learning, and growth."

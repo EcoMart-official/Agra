@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { Shield, Camera, LayoutGrid, Users, Heart, Palette } from 'lucide-react';
@@ -15,6 +16,7 @@ export default function Facilities() {
 
   return (
     <div>
+      <SEO title="acilities" url="/facilities" />
       <PageHero 
         title="Our Facilities" 
         subtitle="A world-class infrastructure designed for safety and learning."

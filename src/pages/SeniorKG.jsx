@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { Check } from 'lucide-react';
@@ -5,6 +6,7 @@ import { Check } from 'lucide-react';
 export default function SeniorKG() {
   return (
     <div>
+      <SEO title="Senior KG" url="/programs/senior-kg" />
       <PageHero 
         title="Senior KG" 
         subtitle="Age: 4.5 - 5.5 Years. School readiness and structured learning."

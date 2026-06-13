@@ -1,9 +1,11 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 
 export default function AboutKidzeeEgra() {
   return (
     <div>
+      <SEO title="About Kidzee Egra" url="/aboutkidzeeegra" />
       <PageHero 
         title="About Kidzee Egra" 
         subtitle="Bringing world-class preschool education to Purba Medinipur."

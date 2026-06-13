@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kidzeeegra.netlify.app/sitemap.xml

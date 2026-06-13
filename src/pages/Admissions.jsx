@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { FileText, UserPlus, Calendar, Phone } from 'lucide-react';
@@ -13,6 +14,7 @@ export default function Admissions() {
 
   return (
     <div>
+      <SEO title="dmissions" url="/admissions" />
       <PageHero 
         title="Admissions" 
         subtitle="Embark on a joyful learning journey with Kidzee Egra."

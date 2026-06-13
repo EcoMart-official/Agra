@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { Check } from 'lucide-react';
@@ -5,6 +6,7 @@ import { Check } from 'lucide-react';
 export default function Nursery() {
   return (
     <div>
+      <SEO title="ursery" url="/programs/nursery" />
       <PageHero 
         title="Nursery" 
         subtitle="Age: 2.5 - 3.5 Years. Fostering independence and expression."

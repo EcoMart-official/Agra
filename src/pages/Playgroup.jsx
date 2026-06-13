@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { Check } from 'lucide-react';
@@ -5,6 +6,7 @@ import { Check } from 'lucide-react';
 export default function Playgroup() {
   return (
     <div>
+      <SEO title="laygroup" url="/programs/playgroup" />
       <PageHero 
         title="Playgroup" 
         subtitle="Age: 1.5 - 2.5 Years. A gentle transition from home to school."

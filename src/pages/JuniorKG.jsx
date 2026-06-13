@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import PageHero from '../components/PageHero';
 import { Check } from 'lucide-react';
@@ -5,6 +6,7 @@ import { Check } from 'lucide-react';
 export default function JuniorKG() {
   return (
     <div>
+      <SEO title="Junior KG" url="/programs/junior-kg" />
       <PageHero 
         title="Junior KG" 
         subtitle="Age: 3.5 - 4.5 Years. Building cognitive and social foundations."
