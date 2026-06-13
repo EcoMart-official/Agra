@@ -9,9 +9,12 @@ import ProgramPreview from "../components/home/ProgramPreview";
 import GalleryPreview from "../components/home/GalleryPreview";
 
 const bgImages = [
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2000&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=2000&auto=format&fit=crop"
+  "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1606092195728-328dff12a27e?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2000&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=2000&auto=format&fit=crop"
 ];
 
 export default function Home() {
@@ -27,75 +30,43 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* 1. Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center bg-[#F8F9FC]">
+      <section className="relative min-h-[90vh] flex items-center bg-[#1E1E1E]">
         {bgImages.map((img, idx) => (
            <div
              key={idx}
              className={`absolute inset-0 z-0 transition-opacity duration-1000 ${bgIndex === idx ? 'opacity-100' : 'opacity-0'}`}
              style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
            >
-             <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px]"></div>
+             <div className="absolute inset-0 bg-[#1E1E1E]/60"></div>
            </div>
         ))}
-        <div className="absolute inset-0 z-0 opacity-10" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23FDB813\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 lg:py-0 w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <div className="inline-block px-4 py-2 rounded-full bg-white text-[#FDB813] font-semibold text-sm mb-6 shadow-sm border border-[#FDB813]/20">
-                <Sparkles className="w-4 h-4 inline-block mr-2" />
-                Admission Open 2024-25
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 text-gray-900" style={{ fontFamily: 'Poppins' }}>
-                Where Kids <span className="text-[#FDB813]">Love to Learn</span> & Grow.
-              </h1>
-              <p className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed font-sans">
-                Every child is unique, every child matters. Provide your child with a strong foundation today for a successful tomorrow at Kidzee Egra.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/admissions" className="bg-[#FDB813] text-[#1E1E1E] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e6a611] transition-all transform hover:scale-105 shadow-xl shadow-[#FDB813]/30 flex items-center justify-center">
-                  Enroll Your Child <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-                <a href="tel:+919091908900" className="bg-white text-[#1E1E1E] border border-gray-200 px-8 py-4 rounded-full font-bold text-lg hover:border-[#FDB813] hover:text-[#FDB813] transition-all flex items-center justify-center">
-                  <PlayCircle className="mr-2 w-5 h-5" /> Book a Tour
-                </a>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-0 bg-[#FDB813] rounded-[3rem] rotate-6 opacity-20 blur-2xl"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1000&auto=format&fit=crop" 
-                  alt="Happy preschool children learning" 
-                  className="rounded-[3rem] object-cover w-full h-full relative z-10 shadow-2xl border-8 border-white"
-                />
-                
-                {/* Floating Elements */}
-                <motion.div animate={{ y: [-10, 10, -10] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} className="absolute -top-10 -left-10 bg-white p-4 rounded-2xl shadow-xl z-20 hidden md:block">
-                  <Star className="w-10 h-10 text-[#FDB813] fill-[#FDB813]" />
-                </motion.div>
-
-                <motion.div animate={{ y: [10, -10, 10] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }} className="absolute -bottom-8 -right-8 bg-white px-6 py-4 rounded-2xl shadow-xl z-20 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#1E1E1E]/5 flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-[#1E1E1E] fill-[#1E1E1E]" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-xl text-gray-900">100%</div>
-                    <div className="text-sm text-gray-500">Child Safety</div>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32 text-center w-full mt-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-center"
+          >
+            <div className="inline-block px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-[#FDB813] font-semibold text-sm mb-6 shadow-sm border border-white/20">
+              <Sparkles className="w-4 h-4 inline-block mr-2" />
+              Admission Open 2024-25
+            </div>
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white" style={{ fontFamily: 'Poppins' }}>
+              Where Kids <span className="text-[#FDB813]">Love to Learn</span> & Grow.
+            </h1>
+            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed font-sans">
+              Every child is unique, every child matters. Provide your child with a strong foundation today for a successful tomorrow at Kidzee Egra.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
+              <Link to="/admissions" className="bg-[#FDB813] text-[#1E1E1E] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e6a611] transition-all transform hover:scale-105 shadow-xl shadow-[#FDB813]/30 flex items-center justify-center">
+                Enroll Your Child <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <a href="tel:+919091908900" className="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-[#1E1E1E] transition-all flex items-center justify-center">
+                <PlayCircle className="mr-2 w-5 h-5" /> Book a Tour
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
